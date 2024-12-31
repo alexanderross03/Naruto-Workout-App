@@ -1,0 +1,27 @@
+@import './styles/animations.css';
+@import './styles/glassmorphism.css';
+@import './styles/patterns.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg bg-gradient-to-r from-naruto-orange to-naruto-red 
+           text-white font-medium transform transition-all duration-300
+           hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-naruto-orange
+           focus:ring-offset-2 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg bg-gradient-to-r from-naruto-blue to-naruto-blue/80
+           text-white font-medium transform transition-all duration-300
+           hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-naruto-blue
+           focus:ring-offset-2 active:scale-95;
+  }
+
+  .card {
+    @apply glass glass-hover rounded-xl p-6 transform transition-all duration-300;
+  }
+}
