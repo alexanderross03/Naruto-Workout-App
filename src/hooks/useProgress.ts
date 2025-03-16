@@ -4,6 +4,7 @@ import { format, isBefore, isEqual, addDays } from 'date-fns';
 import { avatars } from '@/data/avatars';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from './useAuth';
+import type { Avatar } from '@/types';
 
 const initialProgress: UserProgress = {
   level: 1,
@@ -41,7 +42,7 @@ export const useProgress = () => {
           experience: progressData.experience,
           streak: progressData.streak,
           currentAvatarId: progressData.current_avatar_id,
-          workoutDays: workoutDays?.map(day => ({
+          workoutDays: workoutDays?.map((day: { date: string; completed: boolean }) => ({
             date: day.date,
             completed: day.completed
           })) || [],
@@ -90,10 +91,31 @@ export const useProgress = () => {
     return streak;
   };
 
+  const updateAvatar = async (avatarId: number) => {
+    if (!user) return;
+
+    const avatar = avatars.find((a: Avatar) => a.id === avatarId);
+    if (!avatar || progress.level < avatar.requiredLevel) return;
+
+    try {
+      await supabase
+        .from('user_progress')
+        .update({ current_avatar_id: avatarId })
+        .eq('user_id', user.id);
+
+      setProgress((prev: UserProgress) => ({
+        ...prev,
+        currentAvatarId: avatarId
+      }));
+    } catch (error) {
+      console.error('Error updating avatar:', error);
+    }
+  };
+
   const markWorkout = async (completed: boolean, date = format(new Date(), 'yyyy-MM-dd'), expAmount = 50) => {
     if (!user) return;
 
-    const existingDay = progress.workoutDays.find(day => day.date === date);
+    const existingDay = progress.workoutDays.find((day: WorkoutDay) => day.date === date);
     if (existingDay) return;
 
     // Add workout day
@@ -122,7 +144,7 @@ export const useProgress = () => {
         newLevel += 1;
 
         const nextAvatar = avatars.find(
-          avatar => avatar.requiredLevel === newLevel
+          (avatar: Avatar) => avatar.requiredLevel === newLevel
         );
         if (nextAvatar) {
           newAvatarId = nextAvatar.id;
@@ -155,5 +177,6 @@ export const useProgress = () => {
   return {
     ...progress,
     markWorkout,
+    updateAvatar,
   };
 }

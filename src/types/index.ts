@@ -17,3 +17,25 @@ export interface UserProgress {
   workoutDays: WorkoutDay[];
   currentAvatarId: number;
 }
+
+export interface MacroData {
+  description: string;
+  macros: {
+    calories: number;
+    protein: number;
+    carbs: number;
+    fats: number;
+  };
+}
+
+export interface FoodEntry {
+  id: string;
+  user_id: string;
+  description: string;
+  calories: number;
+  protein: number;
+  carbs: number;
+  fats: number;
+  created_at: string;
+  updated_at: string;
+}

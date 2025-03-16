@@ -12,8 +12,8 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ onMarkWorkout }) => {
   return (
     <div className="bg-naruto-scroll/90 p-6 rounded-xl shadow-md space-y-6 backdrop-blur-sm border-2 border-naruto-orange/20">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-bold text-naruto-black ">Secret Scroll</h2>
-        <span className="px-3 py-1 bg-naruto-red/90 text-white text-xs rounded-full font-mediumn animate-pulse-glow ">Hokage Only</span>
+        <h2 className="text-xl font-bold text-naruto-black">Secret Scroll</h2>
+        <span className="px-3 py-1 bg-naruto-red/90 text-white text-xs rounded-full font-medium animate-pulse-glow">Hokage Only</span>
       </div>
       
       <div className="space-y-2">
