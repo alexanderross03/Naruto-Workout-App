@@ -20,7 +20,7 @@ Password: testing123
 
 ## 🎥 Demo Video
 
-[![Watch the Demo](demo-thumbnail.png)]([link-to-your-screen-recording](https://drive.google.com/file/d/15tKcJvGPjFHk1VWD4CrjrCYLK47PH37h/view?usp=drive_link))
+[![Watch the Demo]((https://drive.google.com/file/d/15tKcJvGPjFHk1VWD4CrjrCYLK47PH37h/view?usp=drive_link))
 *Click to watch a screen recording of the app in action!*
 
 ---
