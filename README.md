@@ -6,6 +6,25 @@ A gamified, anime-inspired fitness and nutrition tracker that motivates users to
 
 ---
 
+## 🧪 Demo Account
+
+Want to try the app instantly?
+Use the following test account (shared):
+
+```
+Email: narutofittester@gmail.com
+Password: testing123
+```
+
+---
+
+## 🎥 Demo Video
+
+[![Watch the Demo](demo-thumbnail.png)]([link-to-your-screen-recording](https://drive.google.com/file/d/15tKcJvGPjFHk1VWD4CrjrCYLK47PH37h/view?usp=drive_link))
+*Click to watch a screen recording of the app in action!*
+
+---
+
 ## 🚀 Tech Stack
 
 - **Frontend:** React 18, TypeScript, Vite
@@ -62,18 +81,3 @@ src/
   styles/             # Custom CSS (animations, glassmorphism, patterns)
   types/              # TypeScript types
 ```
-
-## 🧩 Notable Code/Architecture Highlights
-
-- **TypeScript-first:** Strong typing across all components, hooks, and API clients.
-- **Custom Hooks:** `useAuth` for authentication/session, `useProgress` for workout/level logic.
-- **Supabase Integration:** Real-time, scalable backend for user data and authentication.
-- **OpenAI API:** Advanced prompt engineering for accurate food macro analysis.
-- **Gamification:** Avatar system and XP logic for user engagement.
-- **Naruto Branding:** Custom Tailwind theme, emoji avatars, and playful copy throughout.
-- **Deployed on Vercel:** [https://naruto-workout-app.vercel.app/](https://naruto-workout-app.vercel.app/)
----
-
-## 📝 License
-
-MIT 
