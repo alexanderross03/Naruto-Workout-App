@@ -1,6 +1,6 @@
 # Naruto Workout App 🥷🏽🏋️‍♂️
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-naruto--workout--app.vercel.app-orange?style=for-the-badge&logo=vercel)](https://naruto-workout-app.vercel.app/)
+[![Open App](https://img.shields.io/badge/Open%20App-naruto--workout--app.vercel.app-orange?style=for-the-badge&logo=vercel)](https://naruto-workout-app.vercel.app/)
 
 A gamified, anime-inspired fitness and nutrition tracker that motivates users to train like a ninja! This full-stack web app combines workout streaks, avatar progression, and AI-powered food analysis to help users level up both their fitness and nutrition—Naruto style.
 
